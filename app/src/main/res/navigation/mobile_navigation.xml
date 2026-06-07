@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ensa.ma.sensors.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="ensa.ma.sensors.fragments.SensorsListFragment"
+        android:label="Available Sensors"
+        tools:layout="@layout/fragment_sensors_list" />
+
+    <fragment
+        android:id="@+id/nav_temp"
+        android:name="ensa.ma.sensors.fragments.SensorMonitorFragment"
+        android:label="Temperature">
+        <argument android:name="type" android:defaultValue="13" /> <!-- TYPE_AMBIENT_TEMPERATURE -->
+        <argument android:name="title" android:defaultValue="Ambient Temperature" />
+        <argument android:name="use_magnitude" android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_humd"
+        android:name="ensa.ma.sensors.fragments.SensorMonitorFragment"
+        android:label="Humidity">
+        <argument android:name="type" android:defaultValue="12" /> <!-- TYPE_RELATIVE_HUMIDITY -->
+        <argument android:name="title" android:defaultValue="Relative Humidity" />
+        <argument android:name="use_magnitude" android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_proximity"
+        android:name="ensa.ma.sensors.fragments.SensorMonitorFragment"
+        android:label="Proximity">
+        <argument android:name="type" android:defaultValue="8" /> <!-- TYPE_PROXIMITY -->
+        <argument android:name="title" android:defaultValue="Proximity Sensor" />
+        <argument android:name="use_magnitude" android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_magnetic"
+        android:name="ensa.ma.sensors.fragments.SensorMonitorFragment"
+        android:label="Magnetic Field">
+        <argument android:name="type" android:defaultValue="2" /> <!-- TYPE_MAGNETIC_FIELD -->
+        <argument android:name="title" android:defaultValue="Magnetic Field (Magnitude)" />
+        <argument android:name="use_magnitude" android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_accelerometer"
+        android:name="ensa.ma.sensors.fragments.SensorMonitorFragment"
+        android:label="Accelerometer">
+        <argument android:name="type" android:defaultValue="1" /> <!-- TYPE_ACCELEROMETER -->
+        <argument android:name="title" android:defaultValue="Acceleration (Magnitude)" />
+        <argument android:name="use_magnitude" android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_compass"
+        android:name="ensa.ma.sensors.fragments.CompassFragment"
+        android:label="Digital Compass"
+        tools:layout="@layout/fragment_compass" />
+
+    <fragment
+        android:id="@+id/nav_steps"
+        android:name="ensa.ma.sensors.fragments.StepCounterFragment"
+        android:label="Step Counter"
+        tools:layout="@layout/fragment_step_counter" />
+
+    <fragment
+        android:id="@+id/nav_activity"
+        android:name="ensa.ma.sensors.fragments.ActivityRecognitionFragment"
+        android:label="Activity Recognition"
+        tools:layout="@layout/fragment_activity_recognition" />
+
+</navigation>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home Dashboard" />
+
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/ic_sensors"
+            android:title="Sensor Explorer" />
+    </group>
+
+    <item android:title="Environmental">
+        <menu>
+            <item
+                android:id="@+id/nav_temp"
+                android:icon="@mipmap/temp"
+                android:title="Temperature" />
+            <item
+                android:id="@+id/nav_humd"
+                android:icon="@mipmap/humd"
+                android:title="Humidity" />
+        </menu>
+    </item>
+
+    <item android:title="Motion &amp; Orientation">
+        <menu>
+            <item
+                android:id="@+id/nav_accelerometer"
+                android:icon="@drawable/ic_baseline_screen_rotation_24"
+                android:title="Accelerometer" />
+            <item
+                android:id="@+id/nav_compass"
+                android:icon="@mipmap/compass"
+                android:title="Smart Compass" />
+            <item
+                android:id="@+id/nav_proximity"
+                android:icon="@mipmap/proximity"
+                android:title="Proximity Sensor" />
+            <item
+                android:id="@+id/nav_magnetic"
+                android:icon="@mipmap/magnetic"
+                android:title="Magnetic Field" />
+        </menu>
+    </item>
+
+    <item android:title="Advanced Tracking">
+        <menu>
+            <item
+                android:id="@+id/nav_steps"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Step Tracker" />
+            <item
+                android:id="@+id/nav_activity"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Activity AI" />
+        </menu>
+    </item>
+
+</menu>
